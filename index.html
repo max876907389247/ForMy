@@ -11,35 +11,41 @@
 </head>
 <body>
     <header>
-    <div class="wrap">
-      
-            <ul>
+        <div class="wrap">
+            <ul class="headermenu">
                 <li> <a href="#">Главная</a> </li>
-                <li> <a href="#">Про меня</a> </li>
-                <li> <a href="#">Возможности</a> </li>
-                <li> <a href="#">Портфолио</a> </li>
-                <li> <a href="#">Контакты</a> </li>
+                <li> <a href="#my">Про меня</a> </li>
+                <li class="galochcs"> <p class="submenu-link" href="#">Навыки</p>
+                    <ul class="submenu">
+                        <li><a href="./Stranitsa.html">Web-сайты</a></li>
+                        <li><a href="./Stranitsa.html">Python</a></li>
+                        <li><a href="./Stranitsa.html">1С</a></li>
+                        <li><a href="./Stranitsa.html">Про сайт</a></li>
+                    </ul> </li>
+                <li> <a href="#portfolio">Портфолио</a> </li>
+                <li> <a href="#contact">Контакты</a> </li>
             </ul>
-        
-    </div>    
+            
+        </div>    
     </header>
 
-    <section class="section-start"> 
+    <section class="section-start" id="start"> 
     <div class="wrap">
-        <div style="padding: 20vh;">
+        <div>
             <p style="color: #fff;">Welcome! </p><br>
-            <p style="margin-left: -240px; padding: 0;">I am <span class="gold" >Wed</h2> 
-            <p style="margin-left: 40px;" class="gold">Python</p>
-            <p style="margin-left: 360px;" class="gold">1C-programmer</p>
+            <p class="gold section-start-p-2" > <span>I am</span> Wed</p> 
+            <p   class="gold section-start-p-1 ">   Python</p>
+            
+            <p  class="gold section-start-p-3">1C-programmer</p>
         </div>
     </div>
     </section>
 
-    <section style="padding-bottom: 60px;" class="section-my">
+    <section style="padding-bottom: 60px;" class="section-my" id="my">
         <div class="section-my-flex">
         <div class="section-my-inf">
                 <div class="section-my-inf-width">
-                    <p style="color: #323232; font-size: 64px; font-weight: 900;">About <br> me</p>
+                    <p style="color: #323232; font-size: 64px; font-weight: 900;  @media screen and (max-width: 800px) { font-size: 54px;}">About <br> me</p>
                     <div class="progress-margen">
                         
                         <div style="display: flex; justify-content: space-between; width: 93%;">
@@ -86,7 +92,6 @@
                 </div>
         </div>
             
-
         <div class="section-my-photo">
         </div>
 
@@ -124,11 +129,45 @@
                     </div>
                 </div>
             </div>
-            
         </div>
-        </div>      
+        </div>  
+        <div class="section-my-inf-width section-my-text-none">
+            <div class="wrap">
+                <div class="section-I">
+                    <p><span class="gold">Образования:</span> Студент Уральского Политехнического колледжа , 4 курс </p>
+                    <p><span class="gold">Год рождения:</span> 2004г.</p>
+                    <p><span class="gold">Адрес:</span> Россия, Свердловская обл., г. Екатеринбург</p>
+                    <p><span class="gold">E-mail:</span> maxxx999tte@gmail.com</p>
+                    <p><span class="gold">Опыт работы:</span> 0 месяцев</p>
+                </div>
+                <div class="section-my-text-header">       
+                    <div>
+                        <p>Трофимов Максим Юрьевич</p>
+                    </div>                  
+                </div>
+                <div>
+                    <br>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <br>
+                    <br>
+                    <p style="color: #5D5D5D;"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis repudiandae sint aperiam numquam ratione dolores tempora eligendi voluptate omnis dignissimos quidem blanditiis, alias, nobis recusandae beatae excepturi fugiat ad.</p>
+                    <br>
+                    <p style="color: #5D5D5D;"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis repudiandae sint aperiam numquam ratione dolores tempora eligendi voluptate omnis dignissimos quidem blanditiis, alias, nobis recusandae beatae excepturi fugiat ad.</p>
+                </div>
+                <div class="section-my-text-botton">
+                    <p class="gold">Соц сети</p>
+                    <span></span>
+                    <div style="margin-left: 60px;">
+                        <a href="https://t.me/Maksik_old"><img src="./img/telegram.png" alt=""></a>
+                        <a href="https://vk.com/id414790909"><img  src="./img/vkontakte.png" alt=""></a>
+                        <a href=""><img  src="./img/whatsapp.png" alt=""></a>
+                        <a href=""><img  src="./img/instagram.png" alt=""></a>                         
+                    </div>
+                </div>
+            </div>
+            </div>    
     </section>
-    <section class="section-services">
+    <!-- <section class="section-services">
     <div style="background: #0F0F0F" class="wrap">
         <h1>Services</h1>
         <div  class="section-services-flex">       
@@ -154,10 +193,10 @@
                 </div>
         </div>
     </div>       
-    </section>
+    </section> -->
 
-    <section class="section-portfolio">
-    <div class="wrap">
+    <section class="section-portfolio" id="portfolio">
+    <div class="wrap" style="background: #000; padding: 10px;">
         <h1>Portfolio</h1>
         <div class="section-portfolio-inf">
             <ol class="tab-list">
@@ -188,7 +227,7 @@
     </div>        
     </section>
 
-    <section  class="section-contact">
+    <section  class="section-contact" id="contact">
     <div class="wrap">
         <h1>Contact</h1>
         <div class="section-contact-flex">
@@ -207,7 +246,7 @@
                     <p>maxxx999tte@gmail.com</p>
                 </div>
                 <div class="section-my-text-botton">
-                    <div style="margin-left: 60px;">
+                    <div style="margin-left: 5%;">
                         <a href="https://t.me/Maksik_old"><img src="./img/telegram.png" alt=""></a>
                         <a href="https://vk.com/id414790909"><img  src="./img/vkontakte.png" alt=""></a>
                         <a href=""><img  src="./img/whatsapp.png" alt=""></a>
@@ -233,9 +272,11 @@
 
     <section>
     <div class="wrap">
-
+    
+          
     </div>        
     </section>
 
 </body>
 </html>
+

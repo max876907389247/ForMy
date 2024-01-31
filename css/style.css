@@ -20,8 +20,8 @@ h1{
     padding:  40px 0 70px 0;
 }
 
-/*Начало стилей для шапки*/
 
+/*Начало стилей для шапки*/
 header{
     position: fixed;
     width: 100%;
@@ -34,26 +34,86 @@ header{
 header ul{
     display: flex;
     justify-content: right;
-}
+} 
 
 header ul li{
     margin: 0 25px 8px ;
 }
 
 
-header ul li a{
+header ul li a, p{
     transition: all 0.3s ease-in;
 }
 
+.galochcsb p{
+    position: relative;
+}
 
-header ul li a:hover{
+.galochcs p::before{
+    position: absolute;
+    background: #fff;
+    width: 10px ;
+    height: 10px;
+}
+
+header ul li a:hover,
+header ul li p:hover{
     color: #BE9D70;
 }
+
+header a {
+    display: block;
+    text-decoration: none;
+    outline: none;  
+    transition: .3s ease-in-out;
+  }
+  
+  .headermenu > li {
+    position: relative;
+  }
+  
+  .submenu {
+    display: block;
+    position: fixed;
+    background: #19191918;
+    backdrop-filter: blur(6px);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 5;
+    width: 180px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin :0 0;
+    transition: .5s ease-in-out;
+    margin-left: -50px;
+   
+  }
+
+  .submenu a {
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    
+  }
+  .submenu li:last-child a {border-bottom: none;}
+  .headermenu > li:hover .submenu {
+    opacity: 1;
+    transform: scaleY(1);
+  }
 
 /*Конец стилей для шапки*/
 
 /*Начало стилей для section-start*/
-
+.section-start-p-1{
+    margin-left: 40px;   
+}
+.section-start-p-2{
+    margin-left: -240px;   
+}
+.section-start-p-3{
+    margin-left: 360px;   
+}
 .section-start{
     background-image: url(../img/542498e29f675840809d865227234ac6.jpg);
     background-size: cover;
@@ -63,10 +123,12 @@ header ul li a:hover{
     
 }
 
+
 .section-start div{
    text-align: center;
-   
+   padding: 8vh 0;
 }
+
 
 .section-start div p, .section-start div span {
     font-size: 62px;
@@ -180,6 +242,10 @@ header ul li a:hover{
     width: 30px;
     padding: 0 6px;
     
+}
+
+.section-my-text-none{
+    display: none;
 }
 /*Конец стилей для section-my-text*/
 
@@ -323,4 +389,149 @@ header ul li a:hover{
         
     }
 /*Конец стилей для section-contact*/
+@media screen and (max-width: 1600px) {
+    
+     }
 
+     @media screen and (max-width: 1366px) {
+    
+     }
+
+@media screen and (max-width: 1200px) {
+    .wrap{
+        max-width: 1000px;
+    }
+
+    .content-item img{
+    width: 305px;
+    }
+    .section-start div p{
+        font-size: 52px;
+    }
+    .section-my-text-none-width{
+ 
+        margin: 0 auto;
+    }
+  }
+  @media screen and (max-width: 1025px) {
+    .wrap{
+        max-width: 900px;
+    }
+    .section-start div{
+        padding: 12vh 0;
+    } 
+    .section-my-inf{
+     width: 60%;
+    }
+
+    .section-my-photo{
+        width: 40%;
+        height: 700px;
+    }
+
+    .section-my-text{
+        display: none;
+    }
+    .section-my-text-none{
+        display: contents;
+    }
+    .section-my-text-header p {
+        width: 420px;
+    }
+    .content-item img{
+        width: 270px;
+        }
+     }
+@media screen and (max-width: 925px) {
+    .wrap{
+        max-width: 782px;
+    }
+    .headermenu{
+        justify-content: center;
+    }
+    .section-start div p, .section-start div span {
+        font-size: 44px;
+     } 
+     .section-start {
+        height: 60vh;    
+    }
+    h1 {
+        font-size: 46px;
+    }
+        .section-contact-right-botton input, textarea {
+        width: 96%;
+    }
+    .section-contact-right {
+    width: 65%;
+    }
+    .section-contact-left {
+    width: 35%;
+    } 
+    .content-item img {
+    width: 230px;
+}
+}
+
+@media screen and (max-width: 800px) {
+     .wrap{
+        max-width: 740px;
+    }  
+    .section-start div{
+        padding: 8vh 0;
+    } 
+    .content-item img {
+        width: 220px;
+    }
+    .section-portfolio {
+        margin: 50px 0;
+    } 
+    .section-contact-right-top {
+        display: contents;
+    }
+    .section-contact-right-top input {
+        width: 96%;
+    }
+     }
+ @media screen and (max-width: 640px) {
+    *{
+        font-size: 16px;
+    }
+    h1{
+        font-size: 42px;
+    }
+    .wrap{
+            max-width: 600px;
+        }
+    header ul li {
+            margin: 0 23px 8px;
+        }
+    .section-my-text-botton img {
+            padding: 8px 8px;
+        }
+    .content-item img {
+            width: 174px;
+        }
+     }
+ @media screen and (max-width: 480px) {
+    .wrap{
+        max-width: 320px;
+    }
+    .section-start p{
+        margin: 0px;
+        text-align: center;
+    }
+     }   
+@media screen and (max-width: 400px) {
+    *{
+        font-size: 14px;
+    }
+    header ul li {
+            margin: 16px 8px;
+    }
+    header {
+        width: 86%; 
+    }
+    .section-my-text-header p {
+        width: 300px;
+    }
+}
