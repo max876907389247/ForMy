@@ -156,7 +156,11 @@ header a {
     margin: 0 auto;
 }
 
-
+.section-my-inf-width h2{
+    color: #323232;
+    font-size: 64px;
+    font-weight: 900;
+}
 
 .progress-margen{
     margin-top: 40px;
@@ -511,20 +515,76 @@ header a {
     .content-item img {
             width: 174px;
         }
-     }
+    .section-contact-flex {
+    display: flex;
+    flex-direction: column-reverse;
+        }
+        .section-contact-left,.section-contact-right  {
+    width: 100%
+        }
+    .section-contact-left
+    {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        }
+        .section-contact-right button{
+            margin: 30px 0px;
+            text-align: center;
+        }
+    }
  @media screen and (max-width: 480px) {
+    *{
+        font-size: 15px;
+    }
     .wrap{
-        max-width: 320px;
+        max-width: 390px;
     }
     .section-start p{
         margin: 0px;
         text-align: center;
     }
-     }   
-@media screen and (max-width: 400px) {
-    *{
-        font-size: 14px;
+    .section-my-photo{
+        opacity: 0;
+        width: 0;
     }
+    .section-my-text-header p {
+        width: 310px;
+    }
+    .section-my-inf {
+        width: 100%;
+    }
+    .section-my-inf-width h2{
+        font-size: 52px;
+    }
+    .section-my-text-botton p {
+        padding-top: 10px;
+    }
+    .section-my-text-botton span {
+        margin-left: 80px;
+        margin-top: 20px;
+    }
+    .tab-list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .tab-item.is-active {
+        padding: 3px;
+        width: 183px;
+    ;
+    }
+    .tab-item {
+        width: 180px
+    }
+}
+@media screen and (max-width: 400px) {
+    
+    *{
+        font-size: 15px;
+    }
+    .wrap{
+        max-width: 370px;
+    }
+
     header ul li {
             margin: 16px 8px;
     }
@@ -534,4 +594,74 @@ header a {
     .section-my-text-header p {
         width: 300px;
     }
-}
+    .tab-item.is-active {
+        padding: 8px 2px;
+        width: 353px;
+    }
+    .tab-item {
+        padding: 6px 2px;
+        width: 350px;
+        margin: 4px 0; 
+    }
+    .tab-list{
+        display: grid;
+        grid-template-columns: repeat(1,2fr);
+        justify-items: center;
+    }
+    }
+    @media screen and (max-width: 380px) {  
+        *{
+            font-size: 15px;
+        }
+        .wrap{
+            max-width: 350px;
+        }
+        .tab-item.is-active {
+            width: 323px;
+        }
+        .tab-item {
+            width: 320px;
+        }
+        .section-contact-left div {
+            padding: 0px;
+        }
+        }
+@media screen and (max-width: 360px) {  
+        .wrap{
+            max-width: 330px;
+        }
+        .tab-item.is-active {
+            width: 303px;
+        }
+        .tab-item {
+            width: 300px;
+        }
+        }
+@media screen and (max-width: 340px) {  
+        *{
+            font-size: 14px;
+        }
+        .wrap{
+            max-width: 310px;
+        }
+        .tab-item.is-active {
+            width: 283px;
+        }
+        .tab-item {
+            width: 280px;
+        }
+        }
+@media screen and (max-width: 320px) {  
+        *{
+            font-size: 14px;
+        }
+        .wrap{
+            max-width: 300px;
+        }
+        .tab-item.is-active {
+            width: 283px;
+        }
+        .tab-item {
+            width: 280px;
+        }
+        }
