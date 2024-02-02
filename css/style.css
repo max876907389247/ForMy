@@ -20,6 +20,10 @@ h1{
     padding:  40px 0 70px 0;
 }
 
+.dws-menu [ type="checkbox"],
+.dws-menu label.taggleSubmenu{
+    display: none;
+}
 
 /*Начало стилей для шапки*/
 header{
@@ -29,6 +33,23 @@ header{
     padding: 7px 0;
     backdrop-filter: blur(6px);
    
+}
+
+.dws-menu label.tagglemenu{
+    background: #323232;
+    display: none;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in;
+}
+
+.dws-menu label.tagglemenu img{
+    position: absolute;
+    width: 28px;
+    top: 15px;
+    left: 10px;
 }
 
 header ul{
@@ -101,7 +122,89 @@ header a {
     opacity: 1;
     transform: scaleY(1);
   }
+  .dws-menu *{
+    margin: 0;
+    padding: 0;
+   }
+   .dws-menu ul,
+   .dws-menu ol{
+    list-style: none;
+   }
+   .dws-menu > ul{
+    display: flex;
+    justify-content: center;
+   }
+   .dws-menu > ul li{
+    position: relative;
+   }
+  
+   .dws-menu > ul li > a i.fa{
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    font-size: 18px;
+   }
+   .dws-menu > ul li a{
+    display: block;
+    padding: 15px 30px 15px 40px;
+    font-size: 14px;
+    color: #454547;
+    text-decoration: none;
+    text-transform:uppercase;
+    transition: all 0.3s ease;
+   }
+   .dws-menu li a:hover{
+    color: #ffffff;
+    box-shadow: 1px 5px 10px -5px black;
+    transition: all 0.3s ease;
+   }
+   
+   /*sub menu*/
+   .dws-menu li ul{
+    position: absolute;
+    min-width: 150px;
+    display: none;
+   }
+   .dws-menu li > ul li{
+    border: 1px solid #c7c8ca;
+   }
+   .dws-menu li > ul li a{
+    padding: 10px;
+    text-transform: none;
+    background: #e4e4e5;
+   }
+   .dws-menu li > ul li ul{
+    position: absolute;
+    right: -150px;
+    top: 0;
+   }
+   
+   
+   /*==== MEDIA ====*/
+   .dws-menu [type="checkbox"],
+   .dws-menu label.toggleSubmenu{
+    display: none;
+   }
 
+   .dws-menu li:hover > ul{
+    display: block;
+   }
+
+   .dws-menu label.toggleMenu{
+    display: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+   }
+   
+   .dws-menu label.toggleMenu .fa{
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    font-size: 18px;
+   }
 /*Конец стилей для шапки*/
 
 /*Начало стилей для section-start*/
@@ -154,6 +257,10 @@ header a {
     padding: 18px;
     padding-top: 38px;
     margin: 0 auto;
+}
+
+.section-my-inf-width img{
+    display: none;
 }
 
 .section-my-inf-width h2{
@@ -479,7 +586,40 @@ header a {
 @media screen and (max-width: 800px) {
      .wrap{
         max-width: 740px;
-    }  
+    } 
+
+    .dws-menu ul{
+        display: none;
+    }
+
+    input.tagglemenu{
+        transition: 0.3s ease-in;
+    }
+    input.tagglemenu:checked + label.tagglemenu
+    input.taggleSubmenu:checked + label.taggleSubmenu{
+        background: #BE9D70;
+        color: #fff;
+    }
+    input.tagglemenu:checked ~ ul,
+    input.taggleSubmenu:checked{
+        display: block;
+        position: relative;
+    }
+
+    .dws-menu label.tagglemenu
+    {
+        display: block;
+    }   
+    
+    .dws-menu label.taggleSubmenu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        cursor: pointer;
+        display: block;
+    }
+    
     .section-start div{
         padding: 8vh 0;
     } 
@@ -495,6 +635,61 @@ header a {
     .section-contact-right-top input {
         width: 96%;
     }
+
+
+    .dws-menu{
+        overflow: hidden;
+       }
+       .dws-menu ul{
+        display: block;
+        max-height: 0;
+        transition: max-height 0.3s;
+       }
+       .dws-menu li>ul li ul{
+        position: absolute;
+        right: auto;
+        top: auto;
+       }
+       .dws-menu label.toggleMenu{
+        display: block;
+       }
+       input.toggleMenu:checked + label.toggleMenu{
+        background: #000;
+        color: #fff;
+       }
+       input.toggleMenu:checked ~ ul,
+       input.toggleSubmenu:checked ~ ul{
+        display: block;
+        position: relative;
+        max-height: 5000px;
+        transition: max-height 2s ease-in;
+       }
+       .dws-menu label.toggleSubmenu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        display: block;
+       }
+       input.toggleSubmenu:checked ~ a{
+        background: #454547;
+        color: #fff;
+       }
+       .dws-menu label.toggleSubmenu .fa:before{
+        content: "\f0d7";
+        color: #454547;
+       }
+       .dws-menu label.toggleSubmenu .fa{
+        position: absolute;
+        top: 15px;
+        right: 30px;
+       }
+       .dws-menu input.toggleSubmenu:checked ~ label.toggleSubmenu .fa::before{
+        content: "\f0d8";
+        color: #ffffff;
+       }
      }
  @media screen and (max-width: 640px) {
     *{
@@ -552,6 +747,10 @@ header a {
     }
     .section-my-inf {
         width: 100%;
+    }
+
+    .section-my-inf-width img{
+        opacity: 1;
     }
     .section-my-inf-width h2{
         font-size: 52px;

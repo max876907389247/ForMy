@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <div class="wrap">
+        <!-- <div class="wrap">
             <ul class="headermenu">
                 <li> <a href="#">Главная</a> </li>
                 <li> <a href="#my">Про меня</a> </li>
@@ -26,7 +26,31 @@
                 <li> <a href="#contact">Контакты</a> </li>
             </ul>
             
-        </div>    
+        </div>     -->
+        <nav class="dws-menu">
+            <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
+            <label for="menu" class="toggleMenu">Меню</label>
+                <ul>
+                    <li>
+                        <a href="#">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#">Продукция</a>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
+                        <a href="#" class="">Услуги</a>
+                        <label for="sub_m2" class="toggleSubmenu"></label>
+                            <ul>
+                                <li><a href="#">Услуга 1</a></li>
+                                <li><a href="#">Услуга 2</a></li>
+                                <li><a href="#">Услуга 3</a></li>
+                            </ul>
+                      </li>
+                    <li><a href="#"><i class=""></i>Новости</a></li>
+                    <li><a href="#"><i class=""></i>Контакты</a></li>
+                </ul>
+        </nav>
     </header>
 
     <section class="section-start" id="start"> 
