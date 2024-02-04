@@ -81,6 +81,8 @@ header{
     box-shadow: 1px 5px 10px -5px black;
     transition: all 0.3s ease;
    }
+
+
    .transform-img img{
     width: 12px;
     transform: rotate(-90deg);
@@ -565,7 +567,7 @@ header{
         display: block;
     }
     .transform-img img{
-        margin-left: 98%;
+        margin-left: 90%;
        }
     
     .section-start div{
@@ -603,7 +605,7 @@ header{
         display: block;
        }
        input.toggleMenu:checked + label.toggleMenu{
-        background: #222;
+        background: #BE9D70;
         color: #fff;
        }
        input.toggleMenu:checked ~ ul,
@@ -652,6 +654,9 @@ header{
     }
     .section-my-text-botton img {
         padding: 8px 8px;
+    }
+    .transform-img img {
+        margin-left: 86%;
     }
     .content-item img {
         width: 174px;
@@ -772,6 +777,13 @@ header{
         .tab-item {
             width: 320px;
         }
+        .transform-img img {
+            margin-left: 76%;
+        }
+        .section-my-inf-width {
+            width: 90%;
+            padding: 0px;
+        }
         .section-contact-left div {
             padding: 0px;
         }
@@ -796,6 +808,9 @@ header{
         }
         .tab-item.is-active {
             width: 283px;
+        }
+        .transform-img img {
+            margin-left: 74%;
         }
         .tab-item {
             width: 280px;
